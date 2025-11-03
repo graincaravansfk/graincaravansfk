@@ -66,32 +66,6 @@
   }
 
 
-
-.flag-icon-bar {
-    /* Uses flex to center the icons horizontally */
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Space between the circles */
-    padding: 15px 0;
-    background-color: #e9ecef;
-    border-bottom: 1px solid #ccc;
-    flex-wrap: wrap; /* Keeps it responsive on small screens */
-}
-
-.circle-flag {
-    width: 40px; /* Fixed size */
-    height: 40px; /* Fixed size */
-    object-fit: cover; /* Ensures image fills the circle without stretching */
-    border-radius: 50%; /* The key to making it circular */
-    border: 2px solid var(--primary-color);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    cursor: default; /* Indicates no link/functionality */
-    transition: transform 0.2s;
-}
-
-.circle-flag:hover {
-    transform: scale(1.05); /* Gentle zoom effect on hover */
-}
   
 /* Define theme colors */
 :root {
@@ -145,6 +119,7 @@ header h1 {
 
     background-repeat: no-repeat; /* Prevents unwanted repetition outside the 33.33% area */
 }
+
 
 
 
