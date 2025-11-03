@@ -93,6 +93,59 @@
     transform: scale(1.05); /* Gentle zoom effect on hover */
 }
   
+/* Define theme colors */
+:root {
+    --primary-color: #004d99; /* Deep Blue, like Kazakhstan's flag */
+}
+
+/* Header Styling */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em; 
+}
+
+/* Styling for the FLAG BANNER LINE */
+.flag-icon-bar {
+    /* This container acts as the single background element */
+    height: 100px; /* Fixed height for the line */
+    padding: 0;
+    margin: 0;
+    border-bottom: 2px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+
+    /* Multi-layer Backgrounds setup for the static flow effect */
+    background-image: 
+        /* Image 1: Kazakhstan-China */
+        url(images/kazakhstan-china-icon.jpg),
+        /* Image 2: Kazakhstan-Iran */
+        url(images/kazakhstan-iran-icon.jpg), 
+        /* Image 3: Kazakhstan-Canada */
+        url(images/kazakhstan-canada-icon.jpg);
+
+    /* Positioning: Set position for each background image to abut the next */
+    background-position: 
+        0% 50%,     /* Starts at 0% (Left) */
+        33.333% 50%,  /* Starts at 33.333% (Middle) */
+        66.666% 50%;  /* Starts at 66.666% (Right) */
+    
+    /* Size: Each image takes up exactly one third of the width (100% / 3) */
+    background-size: 
+        33.333% 100%, 
+        33.333% 100%, 
+        33.333% 100%;
+
+    background-repeat: no-repeat; /* Prevents unwanted repetition outside the 33.33% area */
+}
+
 
 
 
