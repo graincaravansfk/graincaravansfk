@@ -67,52 +67,39 @@
 
 
 .flag-gallery {
+    /* Use Flexbox to align items horizontally */
     display: flex;
-    justify-content: center; /* Centers the entire row */
-    gap: 20px; /* Space between flags */
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto; /* Centers the container on the page */
+    /* Center the flags in the middle of the container */
+    justify-content: center;
+    /* Allow flags to wrap to the next line if necessary (good for larger screen resizing) */
+    flex-wrap: wrap;
+    /* Add some spacing around the flags */
+    gap: 1rem;
+    padding: 1rem;
 }
 
-/* Individual Flag Item Styling */
 .flag-item {
-    flex: 1 1 30%; /* Allows items to grow/shrink, starting at ~30% width */
-    max-width: 300px; /* Limits size on very large screens */
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
-
-.flag-item:hover {
-    transform: translateY(-5px); /* Simple visual effect on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Each item takes up an equal share, but respects the max-width (300px) */
+    flex: 1 1 300px; /* shorthand for flex-grow: 1, flex-shrink: 1, flex-basis: 300px */
+    /* Center the image within its own div */
+    text-align: center;
+    /* Optional: A cool hover effect */
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    border-radius: 0.75rem; /* Rounded corners */
+    overflow: hidden; /* Ensures image corners match div corners */
 }
 
 .flag-image {
+    /* Ensure the image takes up the full width of its container */
     width: 100%;
-    height: auto; /* Ensures image aspect ratio is maintained */
+    /* Keep the aspect ratio correct */
+    height: auto;
+    /* Make the image a little smoother */
     display: block;
 }
 
-/* --- MOBILE OPTIMIZATION (Stacks flags below 600px) --- */
-@media (max-width: 600px) {
-    .flag-gallery {
-        /* Key for mobile: changes the layout to vertical stacking */
-        flex-direction: column;
-        align-items: center; /* Centers stacked items horizontally */
-        gap: 15px; 
-    }
-
-    .flag-item {
-        /* Takes up 90% of the screen width when stacked */
-        width: 90%;
-        max-width: 350px; 
-    }
-}
-
   
+
 
 
 
