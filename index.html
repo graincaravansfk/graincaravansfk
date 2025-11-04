@@ -148,6 +148,26 @@
         </div>
 
 
+<div class="video-container-wrapper mx-auto max-w-3xl">
+            <!-- 
+                Using Tailwind classes for responsiveness:
+                - relative: Needed for the iframe's absolute positioning
+                - aspect-video: Sets the perfect 16:9 aspect ratio
+                - rounded-xl & overflow-hidden: Replaces the custom styling
+            -->
+            <div class="relative w-full aspect-video rounded-xl overflow-hidden shadow-lg">
+                
+                <iframe
+                    class="absolute top-0 left-0 w-full h-full"
+                    src="https://www.youtube.com/embed/1QlYEfIB2-Y"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen
+                    loading="lazy"
+                    title="YouTube Responsive Video"
+                ></iframe>
+            </div>
+        </div>
 
 
         
@@ -198,6 +218,7 @@
 
 </body>
 </html>
+
 
 
 
